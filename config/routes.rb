@@ -1,11 +1,13 @@
 About::Application.routes.draw do
   root :to => 'application#homepage'
-  resources :companies
   get 'login' => 'users#login'
   match 'register' => 'users#new'
   get 'dashboard' => 'users#dashboard'
+  get 'companies/:domain' => 'companies#show'
+  get 'edit' => 'companies#edit'
+  get 'explore' => 'companies#explore'
   resources :users
-  get 'c/:id' => 'companies#show'
+  resources :companies, :as => :c
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

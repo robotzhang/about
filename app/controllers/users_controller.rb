@@ -1,7 +1,7 @@
 #coding=utf-8
 class UsersController < ApplicationController
   def login
-
+    redirect_to dashboard_url
   end
 
   def new
@@ -19,6 +19,6 @@ class UsersController < ApplicationController
   end
 
   def dashboard
-    @current_user = current_user
+    @company = Company.find_by_user_id(current_user.id)
   end
 end

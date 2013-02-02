@@ -1,3 +1,3 @@
 class Company < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible  :user_id, :domain, :name, :address, :introduce
 end

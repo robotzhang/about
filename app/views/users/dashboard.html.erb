@@ -1,6 +1,10 @@
 <div class="container">
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#">创建公司</a></li>
+    <li class="active"><a href="<%= new_company_url %>">创建公司</a></li>
     <li><a href="#">基本设置</a></li>
   </ul>
+  <div>
+    <a href="<%= company_url(@company.domain) %>"><%= @company.name %></a>
+  </div>
 </div>
+
