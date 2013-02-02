@@ -4,15 +4,7 @@ class ApplicationController < ActionController::Base
     render :template => 'homepage'
   end
 
-  def join
-    render :template => 'join'
-  end
-
-  def setting
-    render :template => 'setting'
-  end
-
-  def show
-    render :template => 'show'
+  def current_user
+    session[:user]
   end
 end

@@ -34,4 +34,15 @@ About::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address => "smtp.exmail.qq.com",
+      :port => "25",
+      :domain => "exmail.qq.com",
+      :authentication => :plain,
+      :user_name => "send@adorona.com",
+      :password => "adorona6B",
+      :enable_starttls_auto => true
+  }
 end
