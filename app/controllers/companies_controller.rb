@@ -17,7 +17,16 @@ class CompaniesController < ApplicationController
   end
 
   def edit
-    return redirect_to login_url(:url => edit_url) if current_user.blank?
+    @company = Company.find_by_domain(params[:domain], :first)
+  end
+
+  def update
+    @company = Company.find_by_domain(params[:domain], :first)
+    if @company.update_attributes(params[:company])
+      redirect_to company_url(@company.domain)
+    else
+      render :action => :edit
+    end
   end
 
   def explore

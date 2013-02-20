@@ -4,7 +4,7 @@ About::Application.routes.draw do
   match 'register' => 'users#new'
   get 'dashboard' => 'users#dashboard'
   get 'companies/:domain' => 'companies#show'
-  get 'edit' => 'companies#edit'
+  get 'companies/:domain/edit' => 'companies#edit'
   get 'explore' => 'companies#explore'
   resources :users
   resources :companies, :as => :c
