@@ -1,0 +1,7 @@
+<div class="container">
+  <ul>
+    <% @companies.each do |company| %>
+    <li><a href="<%= company_url(company.domain) %>"><%= company.name %></a></li>
+    <% end %>
+  </ul>
+</div>

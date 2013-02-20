@@ -21,7 +21,7 @@ class CompaniesController < ApplicationController
   end
 
   def explore
-
+    @companies = Company.all
   end
 
 end
