@@ -12,6 +12,7 @@
  *= require_tree .
  *= require_self
  */
+.mt10 { margin-top: 10px; }
 .navbar-fixed-top {
     position: static;
     right: 0;

@@ -2,27 +2,27 @@
     body {
         background: url(http://simg.sinajs.cn/xblogstyle/images/page404/page404.jpg); background-size: cover; filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
     }
-    .card { background-color: #fff; background-color: rgba(255, 255, 255, 0.6); margin-top: 100px;  }
+    .card { background-color: #fff; background-color: rgba(255, 255, 255, 0.6); margin-top: 100px; position: absolute; padding: 20px; width: auto; border-radius: 5px; box-shadow: 0 0 8px #666; margin-bottom: 50px;  }
+    .card h1 { margin: 0; margin: 0 -10px; }
+    .card .line { border-bottom: #ccc 1px solid; margin: 10px 0; }
 </style>
 <div class="container">
-    <div class="card" style="padding: 20px; width: 380px; border-radius: 5px; box-shadow: 0 0 8px #666; margin-bottom: 50px;">
+    <div class="card">
         <h1><%= @company.name %></h1>
-        <div></div>
+
+        <div><%= @company.introduce %></div>
+
+        <div class="line"></div>
+
         <ul class="unstyled">
-            <li><i class="icon-map-marker"></i><%= @company.address %></li>
-            <li><i class="icon-user"></i> 张先生 13482285699</li>
+            <li><i class="icon-map-marker" title="公司地址"></i><%= @company.address %></li>
+            <li><i class="icon-user" title="联系人"></i> 张先生 13482285699</li>
         </ul>
-        <div style="border-bottom: #ccc 1px solid;"></div>
 
-        <div style="margin: 10px 0;">
-            <a href="javascript:void(0);"><img src="http://www.hoohua.com/img/sina.png" /></a>
-            <a href="javascript:void(0);"><img src="http://www.hoohua.com/img/qq.png" /></a>
-            <a href="javascript:void(0);"><img src="http://www.hoohua.com/img/dou.png" /></a>
-            <a href="javascript:void(0);"><img src="http://www.hoohua.com/img/qqc.png" /></a>
-        </div>
+        <div class="line"></div>
 
-        <ul  class="unstyled">
-            <li><a href=""><i class="icon-share-alt"></i> 火龙果官方网站</a></li>
+        <ul  class="unstyled mt10">
+            <li><a href="<%= @company.site_url %>"><i class="icon-share-alt"></i> 火龙果官方网站</a></li>
         </ul>
     </div>
 </div>

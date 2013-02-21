@@ -32,6 +32,11 @@
         <div class="controls"><%= f.text_area :introduce, :rows => 5 %></div>
       </div>
 
+      <div class="control-group">
+        <%= f.label :site_url, '官网地址', :class => "control-label" %>
+        <div class="controls"><%= f.text_field :site_url %></div>
+      </div>
+
       <div class="form-actions">
         <%= f.submit '确定', :class => 'btn btn-success' %>
       </div>
